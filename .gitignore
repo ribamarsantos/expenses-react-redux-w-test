@@ -7,3 +7,5 @@ yarn-error.log
 *.snap
 public/bundle.js
 public/bundle.js.map
+public/styles.css.map
+public/styles.css
