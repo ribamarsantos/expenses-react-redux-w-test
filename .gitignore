@@ -5,7 +5,4 @@ yarn-error.log
 .DS_Store
 */__snapshots__
 *.snap
-public/bundle.js
-public/bundle.js.map
-public/styles.css.map
-public/styles.css
+public/dist
