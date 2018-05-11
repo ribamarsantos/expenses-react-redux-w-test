@@ -6,3 +6,5 @@ yarn-error.log
 */__snapshots__
 *.snap
 public/dist
+.env.test
+.env.development
