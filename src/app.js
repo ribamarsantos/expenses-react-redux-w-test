@@ -6,7 +6,7 @@ import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';
 import configureStore from './store/configureStore';
-import { addExpense } from './actions/expenses';
+import { startSetExpenses } from './actions/expenses';
 import { setTextFilter } from './actions/filters';
 import  getVisibleExpenses from './selectors/expenses';
 import './firebase/firebase';
@@ -18,4 +18,8 @@ const App = () => (
         <AppRouter />
     </Provider>
 )
-ReactDOM.render(<App />, document.getElementById('app'));
+
+ReactDOM.render(<h1>Loading... </h1>,document.getElementById('app'));
+    store.dispatch(startSetExpenses()
+    ).then(() => ReactDOM.render(<App />, document.getElementById('app')));
+
