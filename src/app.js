@@ -6,7 +6,7 @@ import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';
 import configureStore from './store/configureStore';
-import { startSetExpenses } from './actions/expenses';
+import { startSetExpenses, startRemoveExpense } from './actions/expenses';
 import { setTextFilter } from './actions/filters';
 import  getVisibleExpenses from './selectors/expenses';
 import './firebase/firebase';
@@ -18,6 +18,7 @@ const App = () => (
         <AppRouter />
     </Provider>
 )
+// store.dispatch(startRemoveExpense({id: '-LCKqpEERcW6RWDBW0BD'}));
 
 ReactDOM.render(<h1>Loading... </h1>,document.getElementById('app'));
     store.dispatch(startSetExpenses()
