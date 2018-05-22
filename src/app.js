@@ -9,7 +9,7 @@ import configureStore from './store/configureStore';
 import { startSetExpenses, startRemoveExpense } from './actions/expenses';
 import { setTextFilter } from './actions/filters';
 import  getVisibleExpenses from './selectors/expenses';
-import './firebase/firebase';
+import { firebase } from './firebase/firebase';
 
 const store = configureStore();
 
@@ -24,3 +24,11 @@ ReactDOM.render(<h1>Loading... </h1>,document.getElementById('app'));
     store.dispatch(startSetExpenses()
     ).then(() => ReactDOM.render(<App />, document.getElementById('app')));
 
+firebase.auth().onAuthStateChanged((user) => {
+    if(user) {
+        console.log(user)
+        console.log('log in')
+    } else{
+        console.log('log out')
+    }
+})

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Should render Header correctly 1`] = `
+exports[`Should render Header correctly! 1`] = `
 <header>
   <h1>
     Expensify 
@@ -33,6 +33,13 @@ exports[`Should render Header correctly 1`] = `
       >
         Help
       </NavLink>
+    </li>
+    <li>
+      <button
+        onClick={[Function]}
+      >
+        Logout
+      </button>
     </li>
   </ul>
 </header>
