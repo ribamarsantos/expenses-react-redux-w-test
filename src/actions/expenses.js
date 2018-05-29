@@ -54,8 +54,9 @@ export const editExpense = (id,updates) => ({
 export const startEditExpense = (id, updates) => {
     return (dispatch, getState) => {
         const uid = getState().auth.uid;
+        
         return database.ref(`users/${uid}/expenses/${id}`)
-                                 .update({id, ...updates})
+                                 .update({...updates})
                                  .then(snapshot => dispatch(editExpense(id,updates))); 
     }
         
