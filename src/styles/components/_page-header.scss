@@ -16,3 +16,9 @@
         font-weight: bold;
     }
 }
+
+
+.page-header__subtitle {
+    @extend .page-header__title;
+    font-size: $font-size-small;
+}
